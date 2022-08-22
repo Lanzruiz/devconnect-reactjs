@@ -14,13 +14,13 @@ export const register = ({name, email, password}) => async dispatch => {
         const baseUrl = 'http://localhost:5000'  
         
         // const res = await axios('/api/users', newUser, config);
-        await axios.post(`${baseUrl}/api/users`, newUser)
+        const res = await axios.post(`${baseUrl}/api/users`, newUser)
         // .then(res => {
            
-        //     dispatch({
-        //         type: REGISTER_SUCCESS,
-        //         payload: res.data
-        //     })
+        dispatch({
+            type: REGISTER_SUCCESS,
+            payload: res.data
+        })
         // })
                   
     } catch (err) {
