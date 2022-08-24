@@ -20,7 +20,7 @@ export const register = ({name, email, password}) => async dispatch => {
         dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
-        })
+        });
         // })
                   
     } catch (err) {

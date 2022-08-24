@@ -21,30 +21,8 @@ const Register = ({ setAlert, register }) => {
     const onSubmit = async e => {
        e.preventDefault();
        if(password !== password2) {
-            setAlert('Password do not match!', 'danger', '2000');
+            setAlert('Password do not match!', 'danger', '6000');
        } else {
-          //   console.log(formData)
-            // const newUser = {
-            //     name,
-            //     email,
-            //     password
-            // }
-
-            // try {
-
-            //     const baseUrl = 'http://localhost:5000'
-            
-                
-            //     // const res = await axios('/api/users', newUser, config);
-            //     axios.post(`${baseUrl}/api/users`, newUser)
-            //     .then(res => {
-            //         console.log(res);
-            //         console.log(res.data);
-            //     })
-                          
-            // } catch (err) {
-            //     console.log(err)
-            // }
             register({ name, email, password });
        }
     }
@@ -71,10 +49,10 @@ const Register = ({ setAlert, register }) => {
                     >
                 </div>
                 <div className="form-group">
-                    <input type="password" placeholder="Password" name="password" minLength="6" value={password} onChange={e => onChange(e)}/>
+                    <input type="password" placeholder="Password" name="password" value={password} onChange={e => onChange(e)}/>
                 </div>
                 <div className="form-group">
-                    <input type="password" placeholder="Confirm Password" name="password2" value={password2} onChange={e => onChange(e)} minLength="6"/>
+                    <input type="password" placeholder="Confirm Password" name="password2" value={password2} onChange={e => onChange(e)}/>
                 </div>
                 <input type="submit" className="btn btn-primary" value="Register" />
             </form>
