@@ -10,6 +10,7 @@ import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import { loadUser } from './actions/auth'
 import setAuthToken from './utils/setAuthToken'
+import Dashboard from './components/dashboard/Dashboard'
 
 import './App.css'
 
@@ -33,6 +34,7 @@ const App = () => {
                   <Route path="/" element={<Landing />} />
                   <Route path="register" element={<Register />} />
                   <Route path="login" element={<Login />} />
+                  <Route path="dashboard" element={<Dashboard />} />
                 
               </Routes>
           </Fragment>

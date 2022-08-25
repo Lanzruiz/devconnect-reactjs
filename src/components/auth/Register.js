@@ -30,7 +30,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
 
     if(isAuthenticated) {
         return <Navigate to="/dashboard" />
-    }
+    } 
   
     return (
         <section className="container">
